@@ -1,3 +1,22 @@
-"use strict"; 
-const age = 5;
-console.log(age);
+/* Если выписать все натуральные числа меньше 10, кратные 3 или 5, то получим 3, 5, 6 и 9.
+ Сумма этих чисел равна 23.
+Найдите сумму всех чисел меньше 1000, кратных 3 или 5. */
+
+const target = 1000;
+let sum1 = 0;
+let sum2 = 0;
+
+for (let i = 3; i < target; i += 3) {
+  console.log (i);
+  sum1 += i;
+}
+ console.log (sum1);
+
+for (let i = 5; i < target; i += 5) {
+  console.log (i);
+  sum2 += i;
+}
+ console.log (sum2);
+
+ console.log (sum1 + sum2);
+

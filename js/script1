@@ -277,6 +277,52 @@
 
 
 
+// завдання 19
+// Если мы перечислим все натуральные числа до 10, кратные 3 или 5, мы получим 3, 5, 6 и 9. 
+//Сумма этих кратных равна 23.
+//Найдите сумму всех чисел, кратных 3 или 5 меньше 1000.
+//const number = 999;
+//let sum = 0;
+//for ( let i = 1; i <= number; i +=1 ) {
+//    if( i % 3 === 0 || i % 5 === 0) {
+//        console.log(i);
+//        sum += i;
+//    }
+//    };
+//    console.log(sum);
+
+
+// завдання 20
+// Напиши скрипт поиска логина, если есть виведи смс найден, если нет виведи смс не найден
+
+const logins = ["ma4goDota", "poli1scute", "fkgnlnrm3ldfj"];
+const loginToFinde = "poli1scute";
+
+// через for
+//let message = `${loginToFinde} не найден`;
+//for (let login of logins) {
+//    if (login === loginToFinde) {
+//        message = `${loginToFinde} найден`;
+//       break;
+//   }
+//}
+//console.log(message);
+
+// или второй вариант через тернарник 
+const message = logins.includes(loginToFinde) 
+//    ? 'найден'  
+//   : 'не найден';
+//console.log(message);
+
+
+
+
+
+
+
+
+
+
 
 
 

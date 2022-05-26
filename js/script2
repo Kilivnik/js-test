@@ -1,0 +1,332 @@
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//      return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for(const potion of this.potions) {
+//       if(potion === newPotion) {
+//         return `Error! Potion ${newPotion} is already in your inventory!`;
+//       }
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     const potionIndex = this.potions.indexOf(potionName);
+
+//     if (potionIndex === -1) {
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
+
+//     this.potions.splice(potionIndex, 1);
+//   },
+//   updatePotionName(oldName, newName) {
+//     const potionIndex = this.potions.indexOf(oldName);
+
+//     if (potionIndex === -1) {
+//       return `Potion ${oldName} is not in inventory!`;
+//     }
+
+//     this.potions.splice(potionIndex, 1, newName);
+//   },
+//   // Change code above this line
+// }
+
+// console.log(atTheOldToad.getPotions());
+// console.log();
+
+// завдання 1
+// Переведіть текст вигляду border-left-width до borderLeftWidth
+// Напишіть функцію camelize(str), яка перетворює рядки «my-short-string» на «myShortString».
+//
+// Тобто дефіси віддаляються, а всі слова після них отримують велику букву.
+//
+// camelize("background-color") == 'backgroundColor';
+// camelize("list-style-image") == 'listStyleImage';
+// camelize("-webkit-transition") == 'WebkitTransition';
+
+// завдання 2
+// Залишити унікальні елементи масиву
+// важливість: 4
+// Нехай arr – масив рядків.
+// Напишіть функцію unique(arr), яка повертає масив, що містить лише унікальні елементи arr.
+
+// function unique(arr) {
+//   /* ваший код */
+// }
+
+// let strings = ["торт", "тортик", "кекс", "сир",
+//   "бутерброд", "сир", "шоколад", "кекс", "масло", "олія", "торт"
+// ];
+
+
+// завдання 3
+// Напишіть дві функції
+// letMeSeeYourName(callback) - запитує ім'я користувача
+//через prompt і викликає функцію зворотного виклику
+//greet(name) - колбек, який приймає ім'я і виводить в консоль
+//рядок "Привіт <name>"
+//Реалізуй перевірку, чи name не пустий рядок
+
+
+
+// завдання 4
+// Напишіть дві функції
+//makeProduct(назва, ціна, callback) - приймає
+//імя і ціну товару, а також функцію callback.
+//Функція створює об'єкт товару, додає йому унікальний
+//ідентифікатор у властивості id і викликає зворотний виклик
+//передаючи йому створений об’єкт.
+//showProduct(product) - callback приймає об'єкт
+//продукта і виводить його в консоль
+
+
+
+// завдання 5
+// Виконай рефакторинг makeDish так, щоб не потрібно було
+// щоразу передавати ім'я шефа.
+// Напишіть функцію makeShef(shefName), яка повертає функцію
+// makeDish(dish), що пам'ятає ім'я шефа при її виклику
+
+// const makeDish = function (shefName, dish) {
+//   console.log(`${shefName} is cooking ${dish}`);
+// };
+
+// makeDish("Mango", "apple pie");
+// makeDish("Poly", "muffins");
+
+
+
+// завдання 6
+// Виправте помилки, щоб код працював
+// const product = {
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
+// console.log(product.price);
+
+
+
+// завдання 7
+// Виправте помилки, щоб код працював
+// const product = {
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
+
+// function callAction(action) {
+//   action();
+// }
+
+// callAction(product.showPrice.bind(product));
+
+
+
+// завдання 8
+// Напишіть функцію each(array, callback), яка
+// першим параметром приймає масив, а другим - функцію,
+// яка застосовується до кожного елемента масиву.
+// Функція each повинна повернути новий масив, елементами
+// якого будуть результати виклику callback
+// callback функції повинна множити елементи на 2
+
+
+// const array = [1,2,3,4,5];
+
+// function each (array, callback) {
+//   const newArray =[];
+//   for(let item of array) {
+//     newArray.push(callback(item));
+    
+//   }
+//   return newArray;
+// }
+ 
+// function multiplay ( value) {
+//   return value * 2;
+// }
+
+// console.log(each(array, multiplay));
+
+
+
+
+// завдання 9
+// Напишіть функцію makeCounter, яка повертає іншу
+// функцію, яка рахує та виводить в консоль кількість своїх викликів
+
+// function makeCounter () {
+//   let counter = 0;
+
+//   return function getResult() {
+  
+//     return counter += 1;
+//   }; 
+// }
+ 
+// const counter = makeCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+
+
+// завдання 10
+// Напишіть функцію, яка заповнює новий масив наданим значенням.
+// Очікуваний результат: (3, 'a') => ['a', 'a', 'a']
+
+
+
+// завдання 11
+// Напишіть функцію filterRange(arr, a, b), яка приймає масив arr, шукає у ньому елементи між a та b і повертає масив цих елементів.
+// Функція повинна повертати новий масив та не змінювати поточний.
+// Наприклад:
+//
+// let arr = [5, 3, 8, 1];
+// let filtered = filterRange(arr, 1, 4);
+//
+// alert (filtered); // 3,1 (збігаються значення)
+// alert(arr); // 5,3,8,1 (без змін)
+
+
+// завдання 12
+// Сортувати у порядку за зменшенням
+//
+// let arr = [5, 2, 1, -10, 8];
+//
+// // ... ваш код для сортування за спаданням
+//
+// alert(arr); // 8, 5, 2, 1, -10
+
+
+// завдання 13
+// Напишіть функцію sortByAge(users), яка приймає масив об'єктів із властивістю age та сортує їх за ним.
+// Наприклад:
+//
+// let bruce = {name: "Bruce", age: 25};
+// let jhon = { name: "Jhon", age: 30};
+// let maria = { name: "Maria", age: 28};
+//
+// let arr = [ bruce, jhon, maria ];
+//
+// sortByAge(arr);
+//
+// // тепер: [bruce, maria, jhon]
+// alert(arr[0].name); // Bruce
+// alert(arr[1].name); // Maria
+// alert(arr[2].name); // Jhon
+
+
+
+// завдання 14
+// Перемешайте массив
+// Напишіть функцію shuffle(array), яка перемішує (випадковим чином) елементи маси.
+// Багатократні дії через shuffle можуть привести до різних послідовних елементів.
+//
+// let arr = [1, 2, 3];
+//
+// shuffle(арр);
+// // arr = [3, 2, 1]
+//
+// shuffle(арр);
+// // arr = [2, 1, 3]
+//
+// shuffle(арр);
+// // arr = [3, 1, 2]
+// // ...
+
+
+// завдання 15
+// Напишіть функцію, яка рахує кількість входжень значення в масив
+// let arr = [2,4,3,1,2,1];
+// Очікуваний результат: (arr, 1) => 2
+
+
+
+// завдання 16
+// Напишіть функцію, яка розгортає масив у зворотному порядку.
+// Очікуваний результат: [1, 2, 3] => [3, 2, 1]
+
+
+// завдання 17
+// Напишіть функцію filterRangeInPlace(arr, a, b), яка приймає масив arr та видаляє з нього всі значення, крім тих, що знаходяться між a та b.
+// Тобто перевірка має вигляд a ≤ arr[i] ≤ b.
+// Функція повинна змінювати масив, що приймає, і нічого не повертати.
+// Наприклад:
+//
+// let arr = [5, 3, 8, 1];
+//
+// filterRangeInPlace(arr, 1, 4); // видалені числа поза діапазоном 1..4
+// alert(arr); // [3, 1]
+
+
+
+// завдання 18
+// Знайдіть суму елементів масиву
+// let arr = [1,2,3,4];
+
+
+
+// завдання 19
+// Если мы перечислим все натуральные числа до 10, кратные 3 или 5, мы получим 3, 5, 6 и 9. 
+//Сумма этих кратных равна 23.
+//Найдите сумму всех чисел, кратных 3 или 5 меньше 1000.
+//const number = 999;
+//let sum = 0;
+//for ( let i = 1; i <= number; i +=1 ) {
+//    if( i % 3 === 0 || i % 5 === 0) {
+//        console.log(i);
+//        sum += i;
+//    }
+//    };
+//    console.log(sum);
+
+
+// завдання 20
+// Напиши скрипт поиска логина, если есть виведи смс найден, если нет виведи смс не найден
+
+const logins = ["ma4goDota", "poli1scute", "fkgnlnrm3ldfj"];
+const loginToFinde = "poli1scute";
+
+// через for
+//let message = `${loginToFinde} не найден`;
+//for (let login of logins) {
+//    if (login === loginToFinde) {
+//        message = `${loginToFinde} найден`;
+//       break;
+//   }
+//}
+//console.log(message);
+
+// или второй вариант через тернарник 
+const message = logins.includes(loginToFinde) 
+//    ? 'найден'  
+//   : 'не найден';
+//console.log(message);
+
+
+//завдання 21
+//Найди самое большое число в масиве, числа уникальные
+
+//const numbers = [10, 15, 36, 8, 99, 1, 37];
+//let maxNumber = numbers[0];
+
+//console.table(numbers);
+ 
+//for(let number of numbers) {
+//    if(number > maxNumber) {
+//        maxNumber = number;
+//        
+//    }
+//}
+//console.log("maxNumber: ", maxNumber);

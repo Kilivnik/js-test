@@ -351,3 +351,131 @@ const message = logins.includes(loginToFinde)
 //    }
 //}
 //console.log("maxNumber: ", maxNumber);
+
+
+// Ось HTML-файл з кнопкою надіслати.
+// Змініть стиль тексту абзацу за допомогою коду JavaScript
+//
+//
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset=utf-8 />
+//   <title>JS DOM paragraph style</title>
+// </head>
+// <body>
+// <p id ='text'>JavaScript Exercises - w3resource</p>
+// <div>
+//   <button id="jsstyle">Style</button>
+// </div>
+// </body>
+// </html>
+//
+// При натисканні на кнопку буде змінено шрифт, розмір шрифту та колір тексту абзацу.
+
+// Напишіть функцію JavaScript, щоб отримати значення імені та прізвища наступної форми.
+//
+// <!DOCTYPE html>
+// <html><head>
+// <meta charset=utf-8 />
+//   <title>Return first and last name from a form</title>
+// </head><body>
+// <form id="form1">
+//   First name: <input type="text" name="fname" value="David"><br>
+//   Last name: <input type="text" name="lname" value="Beckham"><br>
+//   <input type="submit" value="Submit">
+// </form>
+// </body>
+// </html>
+
+// Напишіть програму на JavaScript для встановлення кольору фону абзацу
+
+// <html>
+// <head>
+//   <meta charSet=utf-8/>
+//   <title>Set the background color of a paragraph</title>
+// </head>
+// <body>
+//   <button type="button">Click to set paragraph background color</button>
+//   <p>JavaScript Exercises</p>
+//   <p>Python Exercises</p>
+// </body>
+// </html>
+
+// Ось HTML-файл з кнопкою надіслати.
+// Напишіть функцію JavaScript, щоб отримати значення атрибутів href, rel, target і type для вказаного посилання
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset=utf-8 />
+//   </head>
+// <body>
+// <p><a id="w3r" type="text/html" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
+// <button>Click here to get  attributes value</button>
+// </body></html>
+
+// Напишіть функцію JavaScript для додавання рядків до таблиці.
+
+// <!DOCTYPE html>
+// <html>
+// <head><meta charset=utf-8 />
+//   <title>Insert row in a table</title>
+// </head>
+// <body>
+// <table id="sampleTable" border="1">
+//   <tr><td>Row1 cell1</td>
+//     <td>Row1 cell2</td></tr>
+//   <tr><td>Row2 cell1</td>
+//     <td>Row2 cell2</td></tr>
+// </table><br>
+//   <input type="button" value="Insert row">
+// </body>
+// </html>
+
+// Напишіть функцію JavaScript, яка приймає рядок, стовпець
+// (щоб ідентифікувати конкретну клітинку) і рядок для оновлення вмісту цієї клітинки.
+
+// <!DOCTYPE html>
+// <html><head><meta charset=utf-8 />
+//   <title>Change the content of a cell</title>
+// </head><body>
+// <table id="myTable" border="1">
+//   <tr><td>Row1 cell1</td>
+//     <td>Row1 cell2</td></tr>
+//   <tr><td>Row2 cell1</td>
+//     <td>Row2 cell2</td></tr>
+//   <tr><td>Row3 cell1</td>
+//     <td>Row3 cell2</td></tr>
+// </table><form>
+//   <input type="button" value="Change content">
+// </form></body></html>
+
+// Напишіть функцію JavaScript, яка створює таблицю,
+//   приймає номери рядків,
+//   стовпців від користувача та вводить номер рядка-стовпця як вміст (наприклад, рядок-0 стовпець-0) клітинки.
+
+// Напишіть програму JavaScript для видалення елементів зі спадного списку.
+
+// <!DOCTYPE html>
+// <html><head>
+// <meta charset=utf-8 />
+//   <title>Remove items from a dropdown list</title>
+// </head><body><form>
+//   <select id="colorSelect">
+//     <option>Red</option>
+//     <option>Green</option>
+//     <option>White</option>
+//     <option>Black</option>
+//   </select>
+//   <input type="button" value="Select and Remove">
+// </form>
+// </body>
+// </html>
+
+
+<p>[<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">On mouse over here bold words of the following
+//   paragraph will be highlighted</a>]</p>
+// <p><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong> to
+//   intermediate) who <strong>want</strong> to work with <strong>various</strong> JavaScript <strong>problems</strong> and
+//   write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.</p>

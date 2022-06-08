@@ -5,6 +5,8 @@
 //alert (`Привіт ${name} !`);
 
 
+
+
 // завдання 2
 //Работа с переменными
 
@@ -19,75 +21,80 @@
 //alert(admin);
 
 
-// const atTheOldToad = {
-//   potions: [
-//     { name: "Speed potion", price: 460 },
-//     { name: "Dragon breath", price: 780 },
-//     { name: "Stone skin", price: 520 },
-//   ],
-//   // Change code below this line
-//   getPotions() {
-//      return this.potions;
-//   },
-//   addPotion(newPotion) {
-//     for(const potion of this.potions) {
-//       if(potion === newPotion) {
-//         return `Error! Potion ${newPotion} is already in your inventory!`;
-//       }
-//     }
 
-//     this.potions.push(newPotion);
-//   },
-//   removePotion(potionName) {
-//     const potionIndex = this.potions.indexOf(potionName);
 
-//     if (potionIndex === -1) {
-//       return `Potion ${potionName} is not in inventory!`;
-//     }
-
-//     this.potions.splice(potionIndex, 1);
-//   },
-//   updatePotionName(oldName, newName) {
-//     const potionIndex = this.potions.indexOf(oldName);
-
-//     if (potionIndex === -1) {
-//       return `Potion ${oldName} is not in inventory!`;
-//     }
-
-//     this.potions.splice(potionIndex, 1, newName);
-//   },
-//   // Change code above this line
-// }
-
-// console.log(atTheOldToad.getPotions());
-// console.log();
-
-// завдання 1
+// завдання 3
 // Переведіть текст вигляду border-left-width до borderLeftWidth
 // Напишіть функцію camelize(str), яка перетворює рядки «my-short-string» на «myShortString».
 //
 // Тобто дефіси віддаляються, а всі слова після них отримують велику букву.
 //
+// const camelize = (str) => {
+//   const arr = str.split("-");
+//   const result = arr.map((item, index) => {
+//     if (index === 0) {
+//       return item;
+//     }
+//     return item[0].toUpperCase() + item.slice(1);
+//   });
+//   return result.join("");
+// };
+// console.log(camelize("background-color"));
+// console.log(camelize("list-style-image"));
+// console.log(camelize("-webkit-transition"));
+
 // camelize("background-color") == 'backgroundColor';
 // camelize("list-style-image") == 'listStyleImage';
 // camelize("-webkit-transition") == 'WebkitTransition';
 
-// завдання 2
+
+
+
+// завдання 4
 // Залишити унікальні елементи масиву
 // важливість: 4
 // Нехай arr – масив рядків.
-// Напишіть функцію unique(arr), яка повертає масив, що містить лише унікальні елементи arr.
+// Напишіть функцію unique(arr), яка повертає масив,
+// що містить лише унікальні елементи arr.
 
-// function unique(arr) {
-//   /* ваший код */
-// }
-
-// let strings = ["торт", "тортик", "кекс", "сир",
-//   "бутерброд", "сир", "шоколад", "кекс", "масло", "олія", "торт"
+// let strings = [
+//   "торт",
+//   "тортик",
+//   "кекс",
+//   "сир",
+//   "бутерброд",
+//   "сир",
+//   "шоколад",
+//   "кекс",
+//   "масло",
+//   "олія",
+//   "торт",
 // ];
 
+// Old-school
+// function unique(arr) {
+//   let result = [];
 
-// завдання 3
+//   for (let str of arr) {
+//     if (!result.includes(str)) {
+//       result.push(str);
+//     }
+//   }
+
+//   return result;
+// }
+// console.log(unique(strings));
+
+// New school
+// function unique(arr) {
+//   return Array.from(new Set(arr));
+// }
+// console.log(unique(strings));
+
+
+
+
+// завдання 5
 // Напишіть дві функції
 // letMeSeeYourName(callback) - запитує ім'я користувача
 //через prompt і викликає функцію зворотного виклику
@@ -479,3 +486,170 @@ const message = logins.includes(loginToFinde)
 // <p><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong> to
 //   intermediate) who <strong>want</strong> to work with <strong>various</strong> JavaScript <strong>problems</strong> and
 //   write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.</p>
+
+
+// Напишіть програму на JavaScript, щоб отримати ширину та висоту вікна (щоразу, коли розмір вікна змінюється).
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset=utf-8 />
+//   <title>Window Size : height and width</title>
+// </head>
+// <!-- Resize the window (here output panel) and see the result !-->
+// <body onload="getSize()" onresize="getSize()">
+// <div id="wh">
+//   <!-- Place height and width size here! -->
+// </div>
+// <body>
+// </body>
+// </html>
+
+
+// const select = document.querySelector("#colorSelect");
+// const button = document.querySelector(".btn");
+
+// const { forEach } = require("lodash");
+
+// console.dir(select);
+
+// button.addEventListener("click", () => {
+//   const selected = select.selectedIndex;
+//   console.log(selected);
+//   select.remove(selected);
+// });
+
+// Напишіть програму JavaScript для відображення випадкового зображення
+//(натискання кнопки) з наступного списку.
+//
+// "https://images.pexels.com/photos/462024/pexels-photo-462024.jpeg?cs=srgb&dl=pexels-pixabay-462024.jpg&fm=jpg", width: "240", height: "160"
+// "https://images.pexels.com/photos/1089168/pexels-photo-1089168.jpeg?cs=srgb&dl=pexels-nathan-cowley-1089168.jpg&fm=jpg", width: "320", height: "195"
+// "https://images.pexels.com/photos/1300510/pexels-photo-1300510.jpeg?cs=srgb&dl=pexels-nathan-cowley-1300510.jpg&fm=jpg", width: "500", height: "343"
+
+// const imagesList = [
+//   {
+//     url: "https://images.pexels.com/photos/462024/pexels-photo-462024.jpeg?cs=srgb&dl=pexels-pixabay-462024.jpg&fm=jpg",
+//     width: "240",
+//     height: "160",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/1089168/pexels-photo-1089168.jpeg?cs=srgb&dl=pexels-nathan-cowley-1089168.jpg&fm=jpg",
+//     width: "320",
+//     height: "195",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/1300510/pexels-photo-1300510.jpeg?cs=srgb&dl=pexels-nathan-cowley-1300510.jpg&fm=jpg",
+//     width: "500",
+//     height: "343",
+//   },
+// ];
+
+// const newList = imagesList
+//   .map(
+//     ({ url, width, height }) =>
+//       `<img src="${url}" width="${width}" height="${height}">`
+//   )
+//   .join("");
+
+// const ul = document.createElement("ul");
+// ul.innerHTML = newList;
+// const body = document.querySelector("body");
+// body.appendChild(ul);
+
+// const pAll = document.querySelectorAll("p");
+// console.log(pAll);
+
+// const link = pAll[0].querySelector("a");
+// console.log(link);
+
+// const strongText = pAll[1];
+// console.log(strongText);
+
+// const newText = strongText.querySelectorAll("strong");
+// console.log(newText);
+
+// link.addEventListener("mouseout", () => {
+//   console.log("mouseout");
+//   chengeColor("black");
+// });
+
+// link.addEventListener("mouseover", (event) => {
+//   console.log("mouseover");
+//   console.log(event);
+//   chengeColor("red");
+// });
+
+// const chengeColor = (color) => {
+//   newText.forEach((item) => {
+//     item.style.color = color;
+//   });
+// };
+
+// Даний список повідомлень із кнопками для видалення [x]. Напишіть код, щоб кнопки працювали.
+//
+// <!DOCTYPE HTML>
+// <html>
+//
+// <head>
+// <link rel="stylesheet" href="messages.css">
+//   <meta charset="utf-8">
+//   </head>
+//
+// <body>
+//
+// <div id="container">
+//   <div class="pane">
+//     <h3>Lorem Ipsum</h3>
+//     <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+//     <button class="remove-button">[x]</button>
+//   </div>
+//   <div class="pane">
+//     <h3>Where does it come from?</h3>
+//     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+//     <button class="remove-button">[x]</button>
+//   </div>
+//   <div class="pane">
+//     <h3>Why do we use it?</h3>
+//     <p>It is a long established fact that a reader will be distracted by the readable con
+
+// Створіть дерево, яке по кліку на заголовок приховує-показує нащадків:
+//
+//   Вимоги:
+//
+//     Використовувати лише один обробник подій (застосувати делегування)
+// Клік поза текстом заголовка (на порожньому місці) нічого не повинен робити.
+//
+//   Рішення складається з двох кроків:
+//
+//   Повертаємо текст кожного заголовка дерева елемент <span>. Потім ми можемо додати стилі CSS на :hover і обробляти кліки лише з тексті, т.к. ширина елемента <span> точно співпадає з шириною тексту.
+//   Встановлюємо обробник на кореневий вузол дерева tree та ловимо кліки на елементах <span>, що містять заголовки.
+
+// <!DOCTYPE HTML>
+// <html>
+//
+// <head>
+// <style>
+// .tree span:hover {
+//   font-weight: bold;
+// }
+//
+// .tree span {
+//   cursor: pointer;
+// }
+// </style>
+// <meta charset="utf-8">
+// </head>
+//
+// <body>
+//
+// <ul class="tree" id="tree">
+//   <li>Animals
+//     <ul>
+//       <li>Mammals
+//         <ul>
+//           <li>Cows</li>
+//           <li>Donkeys</li>
+//           <li>Dogs</li>
+//           <li
+
+//jsfiddle.net/

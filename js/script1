@@ -1,2 +1,71 @@
+// Отримати дані з API і вивести їх на сторінку
+// https://geek-jokes.sameerkumar.website/api?form
 
+// function fetchData() {
+//   return fetch("https://geek-jokes.sameerkumar.website/api?format=json")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       document.getElementById("joke").innerHTML = data.joke;
+//     })
+//     .catch((error) => console.log(error));
+// }
 
+// console.log(fetchData());
+
+// https://api.pexels.com/videos/search?query=nature&per_page=1
+// 563492ad6f91700001000001e6402a62aede459d86c470c63d68b668
+// https://www.pexels.com/api/documentation
+// ДЗ
+// Отримати дані з API і вивести їх на сторінку. Добавити стилі.
+// https://openweathermap.org/api
+
+// Через switch
+function whatNumberIsIt(n) {
+  switch (true) {
+    case n == Number.MAX_VALUE:
+      return "Input number is Number.MAX_VALUE";
+    case n == Number.POSITIVE_INFINITY:
+      return "Input number is Number.POSITIVE_INFINITY";
+    case n == Number.MIN_VALUE:
+      return "Input number is Number.MIN_VALUE";
+    case n == Number.NEGATIVE_INFINITY:
+      return "Input number is Number.NEGATIVE_INFINITY";
+    case isNaN(n):
+      return "Input number is Number.NaN";
+    default:
+      return "Input number is " + n;
+  }
+}
+
+// Через if
+function whatNumberIsIt(n) {
+  //coding here
+  let num = n;
+  let result = `Input number is ${num}`;
+  if (n === Number.MAX_VALUE) {
+    return "Input number is Number.MAX_VALUE";
+  }
+  if (n === Number.MIN_VALUE) {
+    return "Input number is Number.MIN_VALUE";
+  }
+  // Сравнение с NaN
+  if (isNaN(n)) {
+    return "Input number is Number.NaN";
+  }
+  if (n === Number.NEGATIVE_INFINITY) {
+    return "Input number is Number.NEGATIVE_INFINITY";
+  }
+  if (n === Number.POSITIVE_INFINITY) {
+    return "Input number is Number.POSITIVE_INFINITY";
+  }
+
+  return result;
+}
+console.log(whatNumberIsIt(1 / 0));
+console.log(whatNumberIsIt(100));
+console.log(whatNumberIsIt(1.7976931348623157e308));
+console.log(whatNumberIsIt(5e-324));
+console.log(whatNumberIsIt(-Number.MAX_VALUE * 2));
+console.log(whatNumberIsIt(NaN));
+console.log(whatNumberIsIt(Infinity + 1));

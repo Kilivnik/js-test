@@ -312,6 +312,137 @@
 
 
 
+// Завдання 11
+// Сортировка
+// Ваша задача состоит в том, чтобы создать функцию,
+// которая может принимать любое неотрицательное целое число
+// в качестве аргумента и возвращать его с цифрами в порядке убывания.
+// По сути, переставьте цифры, чтобы получить максимально возможное число.
+// Примеры:
+// Вход: 42145 Выход:54421
+// Вход: 145263 Выход:654321
+// Вход: 123456789 Выход:987654321
+
+
+// Решение 1
+// function descendingOrder(n) {
+//   const newNumber = n;
+//   const arr = newNumber.toString();
+//   const arr2 = [...arr];
+//   const arr3 = arr2.sort((a, b) => b - a).join("");
+//   return Number(arr3);
+// }
+
+// console.log(descendingOrder(15));
+
+// Решение 2
+// function descendingOrder(n){
+//   return parseInt(String(n).split('').sort().reverse().join(''))
+// }
+
+// Решение 3
+// function descendingOrder(n){
+//   n = [...n.toString()];
+//   return Number(
+//             n
+//             .sort()
+//             .reverse()
+//             .join('')
+//           );
+// }
+
+
+
+// Завдання 12
+// do...while
+// Кодирование в функции padIt, функция принимает 2 параметра:
+// str, это строка, представляющая строку для дополнения,
+// нам нужно добавить "*" слева или справа от str
+// n, это число, сколько раз дополнить строку.
+// Поведение
+// Вам нужно написать оператор цикла внутри функции,
+// которая зацикливает n время.
+// Каждый раз в цикле он будет добавлять единицу * к str,
+// чередуя, с какой стороны он дополняется:
+// в первый раз * к левой стороне strдобавляется,
+// во второй раз * к правой стороне и так далее.
+
+// function padIt(str, n) {
+//   while (n > 0) {
+//     // повторяем n раз
+//     if (n % 2 === 0) {
+//       // если n четное
+//       str = str + "*"; // добавляем к str звездочку
+//     } else {
+//       // если n нечетное
+//       str = "*" + str; // добавляем к str звездочку
+//     }
+//     n--; // уменьшаем n
+//   }
+//   return str;
+// }
+
+
+// function padIt(str, n) {
+//   let counter = 1;
+//   while (counter <= n) {
+//     if (counter % 2 != 0) str = "*" + str;
+//     if (counter % 2 == 0) str += "*";
+//     counter++;
+//   }
+//   return str;
+// } // вариант с помощью цикла
+// console.log(padIt("a", 1));
+// console.log(padIt("a", 2));
+// console.log(padIt("a", 3));
+// console.log(padIt("a", 4));
+// console.log(padIt("a", 5));
+
+
+
+
+// Завдання 13
+// перебор for..in
+// Кодирование в функции giveMeFive,
+// функция принимает 1 параметр: objэто объект.
+// Вам нужно пройти через obj, если длина ключа объекта равна 5,
+// затем протолкнуть значение ключа в массив
+// (вам нужно определить массив самостоятельно, в этот раз я вам не помогу).
+// Дополнительно протолкните значение в массив, если длина значения равна 5.
+// Возврат fiveпосле завершения работ.
+
+// function giveMeFive(obj) {
+//   let five = [];
+//   for (let key in obj) {
+//     if (key.length === 5) five.push(key);
+//     if (obj[key].length === 5) five.push(obj[key]);
+//   }
+//   return five;
+// }
+
+// console.log(giveMeFive({ Our: "earth", is: "a", beautyful: "world" }));
+// console.log(
+//   giveMeFive({ Ihave: "enough", money: "to", buy: "a", car: "model" })
+// );
+// console.log(giveMeFive({ Pears: "than", apple: "sweet" }));
+// console.log(
+//   giveMeFive({
+//     xmn: "nq",
+//     fb: "aspcl",
+//     eydycv: "ecmraj",
+//     xu: "cva",
+//     ojbzpss: "xgsu",
+//     ouv: "bnfa",
+//     tfxfmoy: "kvsq",
+//     awerv: "au",
+//     pxtlmt: "vcrz",
+//     tmfp: "jtefitq",
+//   })
+// );
+
+
+
+
 
 // завдання 11
 //Работа с методами чисел
@@ -938,4 +1069,30 @@ const message = logins.includes(loginToFinde)
 // Отримати дані з API і вивести їх на сторінку
 // https://deckofcardsapi.com/
     
+
+    // Отримати дані з API і вивести їх на сторінку
+// https://geek-jokes.sameerkumar.website/api?form
+
+// const { number } = require("prop-types");
+
+// const { number } = require("prop-types");
+
+// function fetchData() {
+//   return fetch("https://geek-jokes.sameerkumar.website/api?format=json")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       document.getElementById("joke").innerHTML = data.joke;
+//     })
+//     .catch((error) => console.log(error));
+// }
+
+// console.log(fetchData());
+
+// https://api.pexels.com/videos/search?query=nature&per_page=1
+// 563492ad6f91700001000001e6402a62aede459d86c470c63d68b668
+// https://www.pexels.com/api/documentation
+// ДЗ
+// Отримати дані з API і вивести їх на сторінку. Добавити стилі.
+// https://openweathermap.org/api
    

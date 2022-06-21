@@ -1,25 +1,22 @@
-// Отримати дані з API і вивести їх на сторінку
-// https://geek-jokes.sameerkumar.website/api?form
+// function splitAndMerge(string, separator) {
+//   let result = string.join("");
 
-// const { number } = require("prop-types");
-
-// const { number } = require("prop-types");
-
-// function fetchData() {
-//   return fetch("https://geek-jokes.sameerkumar.website/api?format=json")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//       document.getElementById("joke").innerHTML = data.joke;
-//     })
-//     .catch((error) => console.log(error));
+//   //   result = result.join(separator);
+//   console.log(result);
 // }
 
-// console.log(fetchData());
+// console.log(splitAndMerge("My name is John", " "));
+// console.log(splitAndMerge("My name is John", "-"));
+// console.log(splitAndMerge("My name is John", "."));
+// console.log(splitAndMerge("My name is John", ","));
 
-// https://api.pexels.com/videos/search?query=nature&per_page=1
-// 563492ad6f91700001000001e6402a62aede459d86c470c63d68b668
-// https://www.pexels.com/api/documentation
-// ДЗ
-// Отримати дані з API і вивести їх на сторінку. Добавити стилі.
-// https://openweathermap.org/api
+// const str = "My name is John";
+// let words = str.split("");
+// console.log("use split():", words);
+// var s=words.join(" ");
+// console.log("use join():",s);
+// console.log("use split() and join():",str.split(" ").join(" "))
+// //output:
+// use split():[ 'My', 'name', 'is', 'John' ]
+// use join():My name is John
+// use split() and join():My name is John

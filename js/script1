@@ -52,3 +52,104 @@
 
 
 
+// function checkObj(obj, checkProp) {
+//   // Only change code below this line
+//   if(obj.hasOwnProperty(checkProp)) {
+//     return obj[checkProp];
+//   } return "Not Found";
+//   // Only change code above this line
+// }
+
+
+
+// --------------- Task2 ----------------------
+// console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift"));
+// checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift")
+
+// Ваша функция всегда должна возвращать весь объект коллекции записей.
+// Если propнет tracksи valueне является пустой строкой,
+//     обновите или установите для этого альбома propзначение value.
+// Если propесть, tracksно в альбоме нет tracksсвойства,
+//     создайте пустой массив и добавьте valueв него.
+// Если propэто tracksи valueне пустая строка,
+//     добавьте valueее в конец существующего tracksмассива альбома.
+// Если valueэто пустая строка, удалите данное propсвойство из альбома.
+
+
+// const recordCollection = {
+//   2548: {
+//     albumTitle: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   2468: {
+//     albumTitle: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   1245: {
+//     artist: 'Robert Palmer',
+//     tracks: []
+//   },
+//   5439: {
+//     albumTitle: 'ABBA Gold'
+//   }
+// };
+
+// // Only change code below this line
+// function updateRecords(records, id, prop, value) {
+//     const record = records[id];
+//     if (prop === "tracks" && value !== "") {
+//         if (!record.hasOwnProperty(prop)) {
+//             record[prop] = [];
+//             record[prop].push(value);
+//         } else {
+//             record[prop].push(value);
+//         }
+//     } else if (prop === "tracks" && value === "") {
+//         delete record[prop];
+//     }
+//     else if (value !== "") {
+//         record[prop] = value;
+//     }
+//     else if (value === "") {
+//         delete record[prop];
+//     }
+//   return records;
+// }
+
+// console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+
+
+
+// --------------- Task3 ----------------------
+
+// const ourArray = [];
+// let i = 0;
+
+// while (i < 5) {
+//   ourArray.push(i);
+//   i++;
+// }
+// В приведенном выше примере кода whileцикл выполнится 5 раз
+//  и добавит числа от 0 до 4 к ourArray.
+// Давайте попробуем заставить цикл while работать,
+// помещая значения в массив.
+// Добавьте числа от 5 до 0(включительно) в порядке убывания,
+// чтобы myArrayиспользовать whileцикл.
+
+// const myArray = [];
+// let i = 5;
+
+// while(i >= 0) {
+//   myArray.push(i);
+//   i-=1;
+// }
+// console.log(myArray);
+
+const myArray = [];
+for( let i = 1; i <= 5; i ++) {
+    myArray.push(i);
+    
+}
+console.log([myArray]);

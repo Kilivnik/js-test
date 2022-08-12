@@ -155,45 +155,4 @@
 // console.log([myArray]);
 
 
-const salaries = {
-Manager: { salary: 1000, tax: "10%" },
-Designer: { salary: 600, tax: "30%" },
-Artist: { salary: 1500, tax: "15%" },}
-const team = [
-{ name: "Misha", specialization: "Manager" },
-{ name: "Max", specialization: "Designer" },
-{ name: "Vova", specialization: "Designer"},
-{ name: "Leo", specialization: "Artist"},]
 
-const financeReport = calculateTeamFinanceReport(salaries, team);
-
-function calculateTeamFinanceReport(salaries, team) {
-    
-    const teamSpecialization = team.map(({ specialization }) => specialization);
-    // console.log(teamSpecialization);
-    const total = teamSpecialization.reduce((total, specialization) => {
-        if (!salaries.hasOwnProperty(specialization)) {
-            return total; // если нет такого специализации, возвращаем текущий общий объем
-        }
-        
-        const { salary, tax } = salaries[specialization]; // получаем зп и налог для специализации
-        //преобразуем % в число для дальнейшего вычисления
-        const taxPercent = parseInt(tax.replace("%", "")); // получаем процент налога
-
-        const totalSalaryTeam = salary / (100 - taxPercent) * 100; // получаем общую зп команды
-        // (salary/(100-tax)*100  
-
-        if (!total[specialization]) {
-            total[specialization] = Math.trunc(totalSalaryTeam); // если нет такой специализации, добавляем ее в общий объем
-        } else {
-            total[specialization] += Math.trunc(totalSalaryTeam); // если есть, добавляем к ней общую зп команды
-        }
-
-        total.totalSalary += Math.round(totalSalaryTeam); // добавляем общую зп команды в общий объем
-
-        return total;
-        }, {totalSalary: 0 });
-        return total;
-}
-console.log(JSON.stringify(financeReport))
-    

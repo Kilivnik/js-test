@@ -156,3 +156,8 @@
 
 
 
+(function(i) {
+  console.log(i);
+})(25);
+
+console.log(window.i);
